@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Eshaan Gupta — Portfolio</title>
+<meta name="description" content="Eshaan Gupta — B.Tech student portfolio: projects, skills and experience in web development and software engineering.">
+<meta property="og:title" content="Eshaan Gupta — Portfolio">
+<meta property="og:description" content="B.Tech student portfolio: projects, skills and experience in web development and software engineering.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#16a34a">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="boot"><div>LOADING PORTFOLIO...</div><div id="bootbar"><div id="bootfill"></div></div><small>tap to skip</small></div>
+<canvas id="bg"></canvas>
+<div id="xp"></div>
+<button id="top" class="px" aria-label="Scroll to top">▲</button>
+<button id="shareBtn" class="px" aria-label="Share this page" style="position:fixed;right:16px;bottom:calc(68px + env(safe-area-inset-bottom,0px));width:44px;height:44px;border:3px solid var(--ink);background:var(--card);color:var(--ink);box-shadow:4px 4px 0 var(--sh);font-size:1.1rem;z-index:15">🔗</button>
+<nav><div class="w"><b class="px" id="logo"></b>
+  <div class="links"><a href="#work">WORK</a><a href="#about">ABOUT</a><a href="#experience">QUESTS</a><a href="#contact">CONTACT</a></div>
+  <div class="tools">
+  <button id="theme" aria-label="Toggle theme">◐</button><button id="palBtn" class="px" style="font-size:.55rem" aria-label="Colour palette">🎨</button><button id="sndBtn" class="px" style="font-size:.55rem" aria-label="Toggle sound">🔊</button></div></div></nav>
+
+<header class="hero"><div class="w">
+  <small class="px" id="role"></small>
+  <h1 class="px"><span id="tagline"></span><span class="cur"></span></h1>
+  <p id="intro"></p>
+  <a class="btn pri px" href="#work">PRESS START</a><a class="btn px" href="#contact">CONTINUE?</a>
+</div></header>
+
+<section id="work"><div class="w"><h2 class="px">SELECT LEVEL</h2>
+  <div class="filters" id="filters"></div><div class="grid" id="grid"></div></div></section>
+
+<section id="about"><div class="w two">
+  <div><h2 class="px">PLAYER 1</h2><div id="about-text"></div></div>
+  <div><h2 class="px">SKILLS</h2><div id="skills"></div></div>
+</div></section>
+
+<section id="experience"><div class="w"><h2 class="px">QUEST LOG</h2><div class="tl" id="tl"></div></div></section>
+
+<section id="contact"><div class="w contact"><h2 class="px" style="display:inline-block">CONTINUE?</h2>
+  <p id="cta"></p>
+  <a class="btn pri px" id="mail" href="#">EMAIL ME</a><button class="px" id="copy" style="font-size:.6rem;padding:12px 14px">COPY EMAIL</button>
+  <div id="ph" style="margin-top:22px;font-size:1.4rem"></div>
+  <div id="socials" style="margin-top:14px"></div></div></section>
+
+<div class="w"><form class="form" id="cform" style="max-width:420px;margin:0 auto 10px">
+  <input id="cf-name" placeholder="Your name" required>
+  <input id="cf-email" type="email" placeholder="Your email" required>
+  <textarea id="cf-msg" placeholder="Say hello..." required></textarea>
+  <button type="submit" class="btn pri px" style="width:100%">SEND MESSAGE</button>
+</form></div>
+<dialog id="gameDlg">
+  <p class="px" style="font-size:.6rem;margin:0 0 10px">CATCH THE GEMS</p>
+  <canvas id="gc" width="280" height="180"></canvas>
+  <p id="gscore" style="margin:8px 0;color:var(--mute)">Score: 0 · ←/→ or drag</p>
+  <div style="text-align:right"><button class="px" id="gclose" style="font-size:.55rem">CLOSE</button></div>
+</dialog>
+<footer><div class="w">© <span id="yr"></span> <span id="fn"></span> · GAME OVER? NEVER. · <button id="patchBtn" class="px" style="font-size:.5rem;vertical-align:1px">PATCH NOTES</button><div class="visit" id="visit"></div></div></footer>
+<dialog id="patchDlg">
+ <p class="px" style="font-size:.6rem;margin:0 0 14px;color:var(--acc)">PATCH NOTES</p>
+ <ul style="padding-left:18px;margin:0">
+  <li><b>v1.4</b> — Share button, boot-screen skip, confetti sound.</li>
+  <li><b>v1.3</b> — Loading splash, scroll-to-top, visit counter, confetti.</li>
+  <li><b>v1.2</b> — Scroll-tracking XP bar, hidden scrollbars.</li>
+  <li><b>v1.1</b> — Full-site colour palette picker.</li>
+  <li><b>v1.0</b> — Achievements, click sparks, Konami code, mini-game.</li>
+ </ul>
+ <div style="text-align:right;margin-top:14px"><button class="px" id="patchClose" style="font-size:.55rem">CLOSE</button></div>
+</dialog>
+
+<div class="px ach" id="ach"></div>
+<div class="pal-menu" id="palMenu"></div>
+<div class="toast px" id="toast" style="font-size:.6rem"></div>
+
+
+<script src="script.js" defer></script>
+</body>
+</html>
